@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { TresCanvas } from '@tresjs/core'
-
-import TheExperience from './components/TheExperience.vue'
+import { OrbitControls } from '@tresjs/cientos';
 </script>
 
 <template>
@@ -13,6 +12,7 @@ import TheExperience from './components/TheExperience.vue'
         </TresCanvas> -->
         <TresCanvas clear-color="#82dbc8">
           <TresPerspectiveCamera :position="[0, 0, 5]" />
+          <OrbitControls />
           <TresMesh 
             :position="[0.5,1,-1]" 
             :rotation="[-Math.PI / 4,0,0]"
